@@ -1,17 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
+using Readify.KnockKnock.Api.Configuration;
 
-namespace Readify.KnockKnock
+namespace Readify.KnockKnock.Api
 {
     public class Startup
     {
@@ -27,6 +22,15 @@ namespace Readify.KnockKnock
         {
             services.AddControllers()
                 .AddNewtonsoftJson();
+
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "KnockKnock Readify API",
+                    Version = "v1",
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,9 +50,14 @@ namespace Readify.KnockKnock
 
             app.UseRouting();
 
-            app.UseAuthorization();
-
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+
+            var configuration = Configuration.Get<EnvironmentConfiguration>();
+            app.UseSwagger(option => { option.RouteTemplate = configuration.Swagger.JsonRoute; });
+            app.UseSwaggerUI(option =>
+            {
+                option.SwaggerEndpoint(configuration.Swagger.UiEndpoint, configuration.Swagger.Description);
+            });
         }
     }
 }

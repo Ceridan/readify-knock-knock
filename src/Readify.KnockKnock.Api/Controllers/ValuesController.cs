@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Readify.KnockKnock.Controllers
+namespace Readify.KnockKnock.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
