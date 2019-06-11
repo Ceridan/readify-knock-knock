@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Readify.KnockKnock", "src\Readify.KnockKnock\Readify.KnockKnock.csproj", "{E56DC024-C538-4D25-B53E-B89399672E97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Readify.KnockKnock.Api", "src\Readify.KnockKnock.Api\Readify.KnockKnock.Api.csproj", "{E56DC024-C538-4D25-B53E-B89399672E97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
