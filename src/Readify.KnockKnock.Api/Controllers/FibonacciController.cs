@@ -19,7 +19,7 @@ namespace Readify.KnockKnock.Api.Controllers
         public async Task<IActionResult> GetFibonacci(long n)
         {
             var nthFibonacciElement = await Task.Run(() => _fibonacciService.GetSignedNthFibonacciElement(n));
-            return new JsonResult(nthFibonacciElement);
+            return Ok(nthFibonacciElement);
         }
     }
 }

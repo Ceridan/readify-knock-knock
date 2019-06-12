@@ -8,10 +8,10 @@ namespace Readify.KnockKnock.Api.Controllers
     public class TokenController : ControllerBase
     {
         [HttpGet]
-        public JsonResult GetToken()
+        public ActionResult<string> GetToken()
         {
             var token = Environment.GetEnvironmentVariable("READIFY_TOKEN") ?? Guid.Empty.ToString();
-            return new JsonResult(token);
+            return Ok(token);
         }
     }
 }
