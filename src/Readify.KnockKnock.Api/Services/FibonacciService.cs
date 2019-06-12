@@ -6,6 +6,8 @@ namespace Readify.KnockKnock.Api.Services
     {
         public long GetSignedNthFibonacciElement(long n)
         {
+            if (n == 0) { return 0L; }
+
             var sign = n < 0 && n % 2 == 0 ? -1 : 1;
             n = Math.Abs(n);
 
