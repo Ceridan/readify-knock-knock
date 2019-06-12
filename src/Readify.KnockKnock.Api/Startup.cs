@@ -37,6 +37,7 @@ namespace Readify.KnockKnock.Api
 
             services.AddSingleton<IFibonacciService, FibonacciService>();
             services.AddSingleton<IWordsService, WordsService>();
+            services.AddSingleton<ITriangleService, TriangleService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
