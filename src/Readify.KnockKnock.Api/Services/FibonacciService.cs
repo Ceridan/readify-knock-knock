@@ -14,7 +14,7 @@ namespace Readify.KnockKnock.Api.Services
             var f0 = 0L;
             var f1 = 1L;
 
-            for (long i = 2; i <= n; i++)
+            for (var i = 2L; i <= n; i++)
             {
                 var tmp = f0 + f1;
                 f0 = f1;
