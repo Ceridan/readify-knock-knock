@@ -16,8 +16,9 @@ namespace Readify.KnockKnock.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetFibonacci(long n)
+        public async Task<ActionResult<long>> GetFibonacci(long n)
         {
+            // Using Task.Run here because of potentially huge CPU-bound operation
             var nthFibonacciElement = await Task.Run(() => _fibonacciService.GetSignedNthFibonacciElement(n));
             return Ok(nthFibonacciElement);
         }
