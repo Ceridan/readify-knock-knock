@@ -1,4 +1,3 @@
-using System.Linq;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -6,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Readify.KnockKnock.Api.Configuration;
+using Readify.KnockKnock.Api.Middlewares;
 using Readify.KnockKnock.Api.Services;
 
 namespace Readify.KnockKnock.Api
@@ -25,6 +25,8 @@ namespace Readify.KnockKnock.Api
             services
                 .AddControllers()
                 .AddNewtonsoftJson();
+
+            services.AddTransient<FactoryRequestResponseLoggingMiddleware>();
 
             services.AddSwaggerGen(options =>
             {
@@ -53,6 +55,7 @@ namespace Readify.KnockKnock.Api
                 app.UseHsts();
             }
 
+            app.UseMiddleware<FactoryRequestResponseLoggingMiddleware>();
             app.UseHttpsRedirection();
 
             app.UseRouting();
