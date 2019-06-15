@@ -4,9 +4,9 @@ namespace Readify.KnockKnock.Api.Services
     {
         public string DetermineTriangleType(int sideA, int sideB, int sideC)
         {
-            if (sideA + sideB <= sideC
-                || sideA + sideC <= sideB
-                || sideB + sideC <= sideA)
+            if ((long)sideA + sideB <= sideC
+                || (long)sideA + sideC <= sideB
+                || (long)sideB + sideC <= sideA)
             {
                 return "Error";
             }
