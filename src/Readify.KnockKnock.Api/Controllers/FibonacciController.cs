@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Readify.KnockKnock.Api.Services;
@@ -17,7 +18,7 @@ namespace Readify.KnockKnock.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetFibonacci([FromQuery] long n)
+        public async Task<IActionResult> GetFibonacci([FromQuery, Required] long n)
         {
             try
             {

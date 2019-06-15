@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 using Readify.KnockKnock.Api.Services;
 
@@ -15,7 +16,10 @@ namespace Readify.KnockKnock.Api.Controllers
         }
 
         [HttpGet]
-        public ActionResult<string> GetTriangleType(int a, int b, int c)
+        public ActionResult GetTriangleType(
+            [FromQuery, Required] int a,
+            [FromQuery, Required] int b,
+            [FromQuery, Required] int c)
         {
             var triangleType = _triangleService.DetermineTriangleType(a, b, c);
             return Ok(triangleType);

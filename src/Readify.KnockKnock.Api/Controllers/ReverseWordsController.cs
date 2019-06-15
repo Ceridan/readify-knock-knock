@@ -15,7 +15,7 @@ namespace Readify.KnockKnock.Api.Controllers
         }
 
         [HttpGet]
-        public ActionResult<string> GetReverseWords(string sentence)
+        public ActionResult GetReverseWords([FromQuery] string sentence)
         {
             var reversedWords = _wordsService.ReverseWordsInSentence(sentence);
             return Ok(reversedWords);
