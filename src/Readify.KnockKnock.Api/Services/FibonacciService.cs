@@ -4,9 +4,19 @@ namespace Readify.KnockKnock.Api.Services
 {
     public class FibonacciService : IFibonacciService
     {
+        private const int FibonacciLimit = 100;
+
         public long GetSignedNthFibonacciElement(long n)
         {
-            if (n == 0) { return 0L; }
+            if (n == 0)
+            {
+                return 0L;
+            }
+
+            if (Math.Abs(n) > FibonacciLimit)
+            {
+                throw new OverflowException($"Value of n should be between {-FibonacciLimit} and {FibonacciLimit}. Current value is: {n}");
+            }
 
             var sign = n < 0 && n % 2 == 0 ? -1 : 1;
             n = Math.Abs(n);
