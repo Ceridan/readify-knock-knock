@@ -33,7 +33,6 @@ namespace Readify.KnockKnock.UnitTests.Controllers
 
             var badRequestResult = Assert.IsType<BadRequestObjectResult>(response);
             Assert.Equal(400, badRequestResult.StatusCode);
-            Assert.Equal("no content", badRequestResult.Value);
         }
     }
 }
