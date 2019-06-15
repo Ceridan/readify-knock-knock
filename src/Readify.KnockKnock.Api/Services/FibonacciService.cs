@@ -4,7 +4,7 @@ namespace Readify.KnockKnock.Api.Services
 {
     public class FibonacciService : IFibonacciService
     {
-        private const int FibonacciLimit = 100;
+        private const int FibonacciLimit = 92;
 
         public long GetSignedNthFibonacciElement(long n)
         {
