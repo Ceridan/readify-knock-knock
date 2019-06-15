@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Readify.KnockKnock.Api.Services;
@@ -16,11 +17,18 @@ namespace Readify.KnockKnock.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<long>> GetFibonacci(long n)
+        public async Task<IActionResult> GetFibonacci([FromQuery] long n)
         {
-            // Using Task.Run here because of potentially huge CPU-bound operation
-            var nthFibonacciElement = await Task.Run(() => _fibonacciService.GetSignedNthFibonacciElement(n));
-            return Ok(nthFibonacciElement);
+            try
+            {
+                // Using Task.Run here because of potentially huge CPU-bound operation
+                var nthFibonacciElement = await Task.Run(() => _fibonacciService.GetSignedNthFibonacciElement(n));
+                return Ok(nthFibonacciElement);
+            }
+            catch (OverflowException e)
+            {
+                return BadRequest(e.Message);
+            }
         }
     }
 }
