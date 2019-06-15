@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Readify.KnockKnock.Api", "src\Readify.KnockKnock.Api\Readify.KnockKnock.Api.csproj", "{E56DC024-C538-4D25-B53E-B89399672E97}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Readify.KnockKnock.UnitTests", "src\Readify.KnockKnock.UnitTests\Readify.KnockKnock.UnitTests.csproj", "{3B70BBB0-BDC5-46A5-8A47-F11A635F062B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{E56DC024-C538-4D25-B53E-B89399672E97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E56DC024-C538-4D25-B53E-B89399672E97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E56DC024-C538-4D25-B53E-B89399672E97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B70BBB0-BDC5-46A5-8A47-F11A635F062B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B70BBB0-BDC5-46A5-8A47-F11A635F062B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B70BBB0-BDC5-46A5-8A47-F11A635F062B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B70BBB0-BDC5-46A5-8A47-F11A635F062B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
