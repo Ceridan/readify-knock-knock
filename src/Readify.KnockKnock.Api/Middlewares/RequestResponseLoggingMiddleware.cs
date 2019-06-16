@@ -5,11 +5,11 @@ using Microsoft.Extensions.Logging;
 
 namespace Readify.KnockKnock.Api.Middlewares
 {
-    public class FactoryRequestResponseLoggingMiddleware : IMiddleware
+    public class RequestResponseLoggingMiddleware : IMiddleware
     {
         private readonly ILogger _logger;
 
-        public FactoryRequestResponseLoggingMiddleware(ILogger<FactoryRequestResponseLoggingMiddleware> logger)
+        public RequestResponseLoggingMiddleware(ILogger<RequestResponseLoggingMiddleware> logger)
         {
             _logger = logger;
         }

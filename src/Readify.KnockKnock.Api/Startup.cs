@@ -26,7 +26,7 @@ namespace Readify.KnockKnock.Api
                 .AddControllers()
                 .AddNewtonsoftJson();
 
-            services.AddTransient<FactoryRequestResponseLoggingMiddleware>();
+            services.AddTransient<RequestResponseLoggingMiddleware>();
 
             services.AddSwaggerGen(options =>
             {
@@ -55,7 +55,8 @@ namespace Readify.KnockKnock.Api
                 app.UseHsts();
             }
 
-            app.UseMiddleware<FactoryRequestResponseLoggingMiddleware>();
+            app.UseMiddleware<RequestResponseLoggingMiddleware>();
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
