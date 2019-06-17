@@ -38,7 +38,6 @@ namespace Readify.KnockKnock.IntegrationTests
         [InlineData(2, 3, 2, "Isosceles")]
         [InlineData(3, 2, 2, "Isosceles")]
         [InlineData(2, 3, 4, "Scalene")]
-        [InlineData(2, 3, 4, "Scalene")]
         [InlineData(3, 4, 2, "Scalene")]
         [InlineData(4, 2, 3, "Scalene")]
         [InlineData(4, 3, 2, "Scalene")]
