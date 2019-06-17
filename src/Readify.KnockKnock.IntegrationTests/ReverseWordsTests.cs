@@ -2,6 +2,7 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Web;
 using Microsoft.AspNetCore.TestHost;
+using Newtonsoft.Json;
 using Readify.KnockKnock.IntegrationTests.DSL;
 using Xunit;
 
@@ -41,7 +42,8 @@ namespace Readify.KnockKnock.IntegrationTests
             var client = _server.CreateClient();
 
             var response = await client.GetAsync($"{EndpointUrl}?sentence={HttpUtility.UrlEncode(sentence)}");
-            var result = await response.Content.ReadAsStringAsync();
+            var content = await response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<string>(content);
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
             Assert.Equal(expected, result);

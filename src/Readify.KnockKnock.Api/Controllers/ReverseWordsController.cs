@@ -15,10 +15,10 @@ namespace Readify.KnockKnock.Api.Controllers
         }
 
         [HttpGet]
-        public ActionResult GetReverseWords([FromQuery] string sentence)
+        public JsonResult GetReverseWords([FromQuery] string sentence)
         {
             var reversedWords = _wordsService.ReverseWordsInSentence(sentence);
-            return Ok(reversedWords);
+            return new JsonResult(reversedWords);
         }
     }
 }
