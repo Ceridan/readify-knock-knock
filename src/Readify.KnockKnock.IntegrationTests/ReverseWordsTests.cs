@@ -22,7 +22,6 @@ namespace Readify.KnockKnock.IntegrationTests
         [InlineData("", "")]
         [InlineData("cat", "tac")]
         [InlineData("cat and dog", "tac dna god")]
-        [InlineData("cat and dog", "tac dna god")]
         [InlineData("two  spaces", "owt  secaps")]
         [InlineData(" leading space", " gnidael ecaps")]
         [InlineData("trailing space ", "gniliart ecaps ")]
