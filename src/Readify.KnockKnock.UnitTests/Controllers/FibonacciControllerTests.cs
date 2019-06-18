@@ -31,7 +31,7 @@ namespace Readify.KnockKnock.UnitTests.Controllers
 
             var response = await controller.GetFibonacci(n: -9223372036854775808);
 
-            var badRequestResult = Assert.IsType<BadRequestResult>(response);
+            var badRequestResult = Assert.IsType<BadRequestObjectResult>(response);
             Assert.Equal(400, badRequestResult.StatusCode);
         }
     }

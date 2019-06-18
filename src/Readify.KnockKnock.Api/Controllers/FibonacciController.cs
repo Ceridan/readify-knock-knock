@@ -26,9 +26,9 @@ namespace Readify.KnockKnock.Api.Controllers
                 var nthFibonacciElement = await Task.Run(() => _fibonacciService.GetSignedNthFibonacciElement(n));
                 return Ok(nthFibonacciElement);
             }
-            catch (OverflowException)
+            catch (OverflowException e)
             {
-                return BadRequest();
+                return BadRequest(e.Message);
             }
         }
     }
