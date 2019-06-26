@@ -5,6 +5,10 @@
 This project is my implementation of the funny recruitment process task from the [Readify](https://knockknock.readify.net/).
 The main purpose is to build end-to-end simple Web API with Docker containerization and full CI/CD pipeline and also validate final result with Readify checking system.
 
+> ## Caution
+> Please do not use code from this repo when passing the first stage of Readify recruitment process.
+Your application will be rejected and you may be banned.
+
 ## How to build and run Docker container with Web API from scratch
 First of all you need to clone this repo.
 ```bash
