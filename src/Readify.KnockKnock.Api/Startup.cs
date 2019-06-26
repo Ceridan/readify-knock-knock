@@ -1,5 +1,7 @@
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,6 +27,8 @@ namespace Readify.KnockKnock.Api
             services
                 .AddControllers()
                 .AddNewtonsoftJson();
+
+            services.AddResponseCaching();
 
             services.AddTransient<RequestResponseLoggingMiddleware>();
 
@@ -62,6 +66,19 @@ namespace Readify.KnockKnock.Api
             app.UseRouting();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+
+            app.UseResponseCaching();
+            app.Use(async (context, next) =>
+            {
+                context.Response.GetTypedHeaders().CacheControl =
+                    new Microsoft.Net.Http.Headers.CacheControlHeaderValue
+                    {
+                        Public = true,
+                        MaxAge = TimeSpan.FromSeconds(30)
+                    };
+
+                await next();
+            });
 
             var configuration = Configuration.Get<EnvironmentConfiguration>();
             app.UseSwagger(option => { option.RouteTemplate = configuration.Swagger.JsonRoute; });
