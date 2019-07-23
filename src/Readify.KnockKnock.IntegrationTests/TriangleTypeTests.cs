@@ -1,19 +1,18 @@
 using System.Net;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.TestHost;
-using Readify.KnockKnock.IntegrationTests.DSL;
+using Microsoft.AspNetCore.Mvc.Testing;
+using Readify.KnockKnock.Api;
 using Xunit;
 
 namespace Readify.KnockKnock.IntegrationTests
 {
-    public class TriangleTypeTests
+    public class TriangleTypeTests : IClassFixture<WebApplicationFactory<Startup>>
     {
-        private const string EndpointUrl = "/api/TriangleType";
-        private readonly TestServer _server;
+        private readonly WebApplicationFactory<Startup> _factory;
 
-        public TriangleTypeTests()
+        public TriangleTypeTests(WebApplicationFactory<Startup> factory)
         {
-            _server = TestServerFactory.CreateTestServer();
+            _factory = factory;
         }
 
         [Theory]
@@ -47,9 +46,9 @@ namespace Readify.KnockKnock.IntegrationTests
             int c,
             string expected)
         {
-            var client = _server.CreateClient();
+            var client = _factory.CreateClient();
 
-            var response = await client.GetAsync($"{EndpointUrl}?a={a}&b={b}&c={c}");
+            var response = await client.GetAsync($"/api/TriangleType?a={a}&b={b}&c={c}");
             var result = await response.Content.ReadAsStringAsync();
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);

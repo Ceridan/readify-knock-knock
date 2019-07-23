@@ -1,19 +1,18 @@
 using System.Net;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.TestHost;
-using Readify.KnockKnock.IntegrationTests.DSL;
+using Microsoft.AspNetCore.Mvc.Testing;
+using Readify.KnockKnock.Api;
 using Xunit;
 
 namespace Readify.KnockKnock.IntegrationTests
 {
-    public class FibonacciTests
+    public class FibonacciTests : IClassFixture<WebApplicationFactory<Startup>>
     {
-        private const string EndpointUrl = "/api/Fibonacci";
-        private readonly TestServer _server;
+        private readonly WebApplicationFactory<Startup> _factory;
 
-        public FibonacciTests()
+        public FibonacciTests(WebApplicationFactory<Startup> factory)
         {
-            _server = TestServerFactory.CreateTestServer();
+            _factory = factory;
         }
 
         [Theory]
@@ -40,9 +39,9 @@ namespace Readify.KnockKnock.IntegrationTests
         [InlineData(92, 7540113804746346429)]
         public async Task GivenGetFibonacci_WhenPassCorrectValuesOfN_ShouldReturnSuccessWithCorrectResult(long n, long expected)
         {
-            var client = _server.CreateClient();
+            var client = _factory.CreateClient();
 
-            var response = await client.GetAsync($"{EndpointUrl}?n={n}");
+            var response = await client.GetAsync($"/api/Fibonacci?n={n}");
             var content = await response.Content.ReadAsStringAsync();
             long.TryParse(content, out var result);
 
@@ -59,9 +58,9 @@ namespace Readify.KnockKnock.IntegrationTests
         [InlineData(2147483647)]
         public async Task GivenGetFibonacci_WhenPassTooBigValuesOfN_ShouldReturnBadRequest(long n)
         {
-            var client = _server.CreateClient();
+            var client = _factory.CreateClient();
 
-            var response = await client.GetAsync($"{EndpointUrl}?n={n}");
+            var response = await client.GetAsync($"/api/Fibonacci?n={n}");
 
             Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
         }

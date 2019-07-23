@@ -1,21 +1,20 @@
 using System.Net;
 using System.Threading.Tasks;
 using System.Web;
-using Microsoft.AspNetCore.TestHost;
+using Microsoft.AspNetCore.Mvc.Testing;
 using Newtonsoft.Json;
-using Readify.KnockKnock.IntegrationTests.DSL;
+using Readify.KnockKnock.Api;
 using Xunit;
 
 namespace Readify.KnockKnock.IntegrationTests
 {
-    public class ReverseWordsTests
+    public class ReverseWordsTests : IClassFixture<WebApplicationFactory<Startup>>
     {
-        private const string EndpointUrl = "/api/ReverseWords";
-        private readonly TestServer _server;
+        private readonly WebApplicationFactory<Startup> _factory;
 
-        public ReverseWordsTests()
+        public ReverseWordsTests(WebApplicationFactory<Startup> factory)
         {
-            _server = TestServerFactory.CreateTestServer();
+            _factory = factory;
         }
 
         [Theory]
@@ -38,9 +37,9 @@ namespace Readify.KnockKnock.IntegrationTests
             string sentence,
             string expected)
         {
-            var client = _server.CreateClient();
+            var client = _factory.CreateClient();
 
-            var response = await client.GetAsync($"{EndpointUrl}?sentence={HttpUtility.UrlEncode(sentence)}");
+            var response = await client.GetAsync($"/api/ReverseWords?sentence={HttpUtility.UrlEncode(sentence)}");
             var content = await response.Content.ReadAsStringAsync();
             var result = JsonConvert.DeserializeObject<string>(content);
 
