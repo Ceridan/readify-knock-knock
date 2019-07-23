@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Readify.KnockKnock.UnitTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Readify.KnockKnock.IntegrationTests", "src\Readify.KnockKnock.IntegrationTests\Readify.KnockKnock.IntegrationTests.csproj", "{99C8D2F9-58AD-4AA7-9B61-CFAEBF131814}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{846EEDF9-1477-4520-8AFB-B618B7652DEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,10 @@ Global
 		{99C8D2F9-58AD-4AA7-9B61-CFAEBF131814}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99C8D2F9-58AD-4AA7-9B61-CFAEBF131814}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99C8D2F9-58AD-4AA7-9B61-CFAEBF131814}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E56DC024-C538-4D25-B53E-B89399672E97} = {846EEDF9-1477-4520-8AFB-B618B7652DEE}
+		{99C8D2F9-58AD-4AA7-9B61-CFAEBF131814} = {846EEDF9-1477-4520-8AFB-B618B7652DEE}
+		{3B70BBB0-BDC5-46A5-8A47-F11A635F062B} = {846EEDF9-1477-4520-8AFB-B618B7652DEE}
 	EndGlobalSection
 EndGlobal
