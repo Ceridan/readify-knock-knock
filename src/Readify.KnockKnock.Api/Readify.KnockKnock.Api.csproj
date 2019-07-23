@@ -9,49 +9,5 @@
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0-preview5-19227-01" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc2" />
 	</ItemGroup>
-	
-	<ItemGroup>
-	  <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.Api.csproj.ResolveComReference.cache" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.Api.dll" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.Api.pdb" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.Api.dll" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.Api.dll.manifest" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <DeployManifest Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.Api.application" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <ClsidMap Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.Api.clsidmap" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.Api.X.manifest" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <RazorIntermediateAssembly Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.Api.Views.dll" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.Api.Views.pdb" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <_RazorComponentDeclarationAssembly Remove="obj\Debug\netcoreapp3.0\RazorDeclaration\Readify.KnockKnock.Api.dll" />
-	</ItemGroup>
 
 </Project>

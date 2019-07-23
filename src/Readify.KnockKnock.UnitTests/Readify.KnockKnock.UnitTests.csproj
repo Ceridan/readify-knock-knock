@@ -17,59 +17,5 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\Readify.KnockKnock.Api\Readify.KnockKnock.Api.csproj" />
 	</ItemGroup>
-	
-	<ItemGroup>
-	  <_UnmanagedRegistrationCache Remove="obj\Readify.KnockKnock.UnitTests.csproj.UnmanagedRegistration.cache" />
-	  <_UnmanagedRegistrationCache Remove="obj\Readify.KnockKnock.UnitTests.csproj.UnmanagedRegistration.cache" />
-	  <_UnmanagedRegistrationCache Remove="obj\Readify.KnockKnock.UnitTests.csproj.UnmanagedRegistration.cache" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.csproj.ResolveComReference.cache" />
-	  <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.csproj.ResolveComReference.cache" />
-	  <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.csproj.ResolveComReference.cache" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.dll" />
-	  <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.dll" />
-	  <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.dll" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.pdb" />
-	  <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.pdb" />
-	  <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.pdb" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.dll" />
-	  <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.dll" />
-	  <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.dll" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.Readify.KnockKnock.UnitTests.manifest" />
-	  <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.Readify.KnockKnock.UnitTests.manifest" />
-	  <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.Readify.KnockKnock.UnitTests.manifest" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <DeployManifest Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.application" />
-	  <DeployManifest Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.application" />
-	  <DeployManifest Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.application" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <ClsidMap Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.clsidmap" />
-	  <ClsidMap Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.clsidmap" />
-	  <ClsidMap Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.clsidmap" />
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.X.manifest" />
-	  <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.X.manifest" />
-	  <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\Readify.KnockKnock.UnitTests.X.manifest" />
-	</ItemGroup>
 
 </Project>
