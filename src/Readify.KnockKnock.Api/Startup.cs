@@ -6,11 +6,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Readify.KnockKnock.Api.Configuration;
-using Readify.KnockKnock.Api.Middlewares;
-using Readify.KnockKnock.Api.Services;
+using Readify.KnockKnock.Configuration;
+using Readify.KnockKnock.Middlewares;
+using Readify.KnockKnock.Services;
 
-namespace Readify.KnockKnock.Api
+namespace Readify.KnockKnock
 {
     public class Startup
     {

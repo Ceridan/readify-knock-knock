@@ -1,4 +1,4 @@
-namespace Readify.KnockKnock.Api.Configuration
+namespace Readify.KnockKnock.Configuration
 {
     public class SwaggerOptions
     {

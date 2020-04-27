@@ -1,4 +1,4 @@
-namespace Readify.KnockKnock.Api.Services
+namespace Readify.KnockKnock.Services
 {
     public interface ITriangleService
     {

@@ -1,6 +1,6 @@
 using System.Linq;
 
-namespace Readify.KnockKnock.Api.Services
+namespace Readify.KnockKnock.Services
 {
     public class WordsService : IWordsService
     {

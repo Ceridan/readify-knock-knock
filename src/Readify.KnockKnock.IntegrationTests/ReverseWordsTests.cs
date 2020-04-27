@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using System.Web;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Newtonsoft.Json;
-using Readify.KnockKnock.Api;
 using Xunit;
 
 namespace Readify.KnockKnock.IntegrationTests

@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
-namespace Readify.KnockKnock.Api.Middlewares
+namespace Readify.KnockKnock.Middlewares
 {
     public class RequestResponseLoggingMiddleware : IMiddleware
     {

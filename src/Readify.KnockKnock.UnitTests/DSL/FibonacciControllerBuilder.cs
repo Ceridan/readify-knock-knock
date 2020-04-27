@@ -1,5 +1,5 @@
-using Readify.KnockKnock.Api.Controllers;
-using Readify.KnockKnock.Api.Services;
+using Readify.KnockKnock.Controllers;
+using Readify.KnockKnock.Services;
 
 namespace Readify.KnockKnock.UnitTests.DSL
 {

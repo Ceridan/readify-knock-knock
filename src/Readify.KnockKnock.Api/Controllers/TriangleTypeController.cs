@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
-using Readify.KnockKnock.Api.Services;
+using Readify.KnockKnock.Services;
 
-namespace Readify.KnockKnock.Api.Controllers
+namespace Readify.KnockKnock.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
