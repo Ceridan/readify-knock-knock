@@ -1,4 +1,5 @@
 # Readify Knock! Knock! API implementation
+
 ![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/ceridan/readify-knock-knock.svg)
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/ceridan/readify-knock-knock.svg)
 
@@ -6,11 +7,14 @@ This project is my implementation of the funny recruitment process task from the
 The main purpose is to build end-to-end simple Web API with Docker containerization and full CI/CD pipeline and also validate final result with Readify checking system.
 
 > ## Caution
+>
 > Please do not use code from this repo when passing the first stage of Readify recruitment process.
 Your application will be rejected and you may be banned.
 
 ## How to build and run Docker container with Web API from scratch
+
 First of all you need to clone this repo.
+
 ```bash
 git clone git@github.com:Ceridan/readify-knock-knock.git
 cd readify-knock-knock
@@ -19,6 +23,7 @@ cd readify-knock-knock
 You must have Docker installed on your machine for the following steps.
 Also you need to register on the [Readify recruitment portal](https://join.readify.net/)
 to obtain your token to pass as the value for the READIFY_TOKEN environment variable.
+
 ```bash
 docker build --rm --tag readify-knock-knock .
 
