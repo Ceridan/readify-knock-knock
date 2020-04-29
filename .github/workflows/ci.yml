@@ -4,7 +4,7 @@ on: push
 
 jobs:
   build-and-push:
-    name: Build and test library
+    name: Build and push docker image
     runs-on: ubuntu-latest
 
     steps:

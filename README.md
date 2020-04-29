@@ -1,7 +1,6 @@
 # Readify Knock! Knock! API implementation
 
-![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/ceridan/readify-knock-knock.svg)
-![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/ceridan/readify-knock-knock.svg)
+![Continuous Integration](https://github.com/Ceridan/readify-knock-knock/workflows/Continuous%20Integration/badge.svg)
 
 This project is my implementation of the funny recruitment process task from the [Readify](https://knockknock.readify.net/).
 The main purpose is to build end-to-end simple Web API with Docker containerization and full CI/CD pipeline and also validate final result with Readify checking system.
