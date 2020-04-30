@@ -20,7 +20,7 @@ jobs:
     name: Deploy to Azure
     runs-on: ubuntu-latest
 
-    if: ${{ github.ref == "refs/heads/master" }}
+    if: ${{ github.ref == 'refs/heads/master' }}
 
     steps:
       - name: Login via Azure CLI
