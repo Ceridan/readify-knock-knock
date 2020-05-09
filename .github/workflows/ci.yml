@@ -7,7 +7,7 @@ jobs:
     name: Build and push docker image
     runs-on: ubuntu-latest
 
-    if: ${{ !contains(github.event.commits.*.message, '[skip ci]') && !contains(github.event.commits.*.message, '[ci ckip]') }}
+    if: ${{ !contains(github.event.commits.*.message, '[skip ci]') }}
 
     steps:
       - uses: actions/checkout@master
